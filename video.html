@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site de Karaoké - Vidéo</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+  <h1>Site de Karaoké</h1>
+  <button id="back-to-home">Revenir à la page d'accueil</button>
+</header>
+
+<main>
+  <div id="video-container">
+    <video id="karaoke-video" width="960" height="540" controls>
+      <source src="" type="video/mp4">
+      Votre navigateur ne prend pas en charge la balise vidéo.
+    </video>
+    <p id="video-title"></p>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2023 Site de Karaoké</p>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const videoContainer = document.getElementById("video-container");
+    const video = document.getElementById("karaoke-video");
+    const videoTitle = document.getElementById("video-title");
+    const backButton = document.getElementById("back-to-home");
+
+    const params = new URLSearchParams(window.location.search);
+    const videoSrc = params.get("src");
+
+    if (videoSrc) {
+      video.src = videoSrc;
+      videoTitle.innerText = videoSrc.substring(0, videoSrc.lastIndexOf('.mp4'));
+    }
+
+    backButton.addEventListener("click", function() {
+      window.location.href = "index.html";
+    });
+  });
+</script>
+</body>
+</html>

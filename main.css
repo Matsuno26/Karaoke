@@ -1,0 +1,76 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Gris clair */
+  color: #333; /* Noir */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 100% de la hauteur de la fenêtre visible */
+}
+
+header {
+  background-color: #333; /* Noir */
+  color: #fff; /* Blanc */
+  padding: 1em;
+  text-align: center;
+}
+
+main {
+  flex: 1; /* Occupe tout l'espace disponible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main ul#video-list li {
+  margin-bottom: 20px;
+}
+
+main ul#video-list li a{
+  color: #222222;
+}
+
+#video-container {
+  width: 80%;
+  background-color: #fff; /* Blanc */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+#karaoke-video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#video-title {
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center; /* Centrer le texte */
+}
+
+button {
+  background-color: #333; /* Noir */
+  color: #fff; /* Blanc */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block; /* Pour occuper toute la largeur disponible */
+  margin: 0 auto; /* Centrer le bouton */
+}
+
+button:hover {
+  background-color: #555; /* Gris plus foncé */
+}
+
+footer {
+  background-color: #333; /* Noir */
+  color: #fff; /* Blanc */
+  text-align: center;
+  padding: 1em;
+}
